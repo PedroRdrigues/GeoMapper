@@ -1,3 +1,3 @@
 # Encurtador de imports
-from MapeAR.afforestation.formatTable import  FormatTable
-from MapeAR.afforestation.afforestation import Afforestation
+from GeoMapping.afforestation.formatTable import  FormatTable
+from GeoMapping.afforestation.afforestation import Afforestation

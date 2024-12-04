@@ -7,7 +7,7 @@ build-backend = "hatchling.build"
 [project]
 
 name = "GeoMapping"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Pedro Rodrigues", email="p.hrdrigues1@gmail.com" },
 ]
