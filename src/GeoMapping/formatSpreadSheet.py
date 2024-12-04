@@ -6,7 +6,7 @@ Created on Mon Nov 11 12:43:04 2024
 """
 import os
 from dataclasses import dataclass
-from MapeAR.afforestation import Afforestation
+from GeoMapping.afforestation import Afforestation
 
 
 @dataclass
