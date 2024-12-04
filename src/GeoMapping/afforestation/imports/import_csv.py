@@ -7,7 +7,7 @@ Created on Mon Nov 11 17:20:42 2024
 
 from dataclasses import dataclass
 import pandas as pd
-from MapeAR.afforestation import FormatTable
+from GeoMapping.afforestation import FormatTable
 
 """Importa a tabela em .csv e chama a função de formatação de tabela"""
 

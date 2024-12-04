@@ -6,7 +6,7 @@ Created on Mon Nov 25 16:42:36 2024
 """
 
 from dataclasses import dataclass
-from MapeAR.afforestation.imports import ImportCsv, ImportExcel
+from imports import ImportCsv, ImportExcel
 
 
 extensionListExcel = ['.xlsx', '.xls', '.xlsm', '.xlsb', '.xltx', '.xltm']
