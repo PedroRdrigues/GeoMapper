@@ -1,6 +1,6 @@
 # GeoMapping
 
-Tratamento e convers‹o de dados em GeoJson ou .xlsx
+Data processing and conversion in GeoJson or .xlsx
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ Install the latest version of GeoMapping using pip.
     area.afforestation() 
 ```
 
-## Saves to a specified file and names it
+## ðŸ’¾ Saves to a specified file and names it 
 
 ```code
     area.save('Arborizacao_Brasil_tratado')
