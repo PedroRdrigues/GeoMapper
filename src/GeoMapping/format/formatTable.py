@@ -20,6 +20,8 @@ class FormatTable:
     colunms: None
 
     def __post_init__(self):
+        # Converte o DataFrame ou a coluna para string antes de substitui
+        self.df = self.df.astype("object") 
         # Formata todas as colunas e renomeia as colunas respectivas de coordenadas x e y
         self.renameColumns()
         self.removeNone()  # Remove linhas e colunas totalmente vazias

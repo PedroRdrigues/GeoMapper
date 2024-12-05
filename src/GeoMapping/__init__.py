@@ -5,7 +5,7 @@ from .formatSpreadSheet import FormatSpreadSheet
 EXEMPLE:
 from MapeAR import FormatSpreadSheet as fss
 
-# Coleta do caminho do arquivo de origem .csv, .xlsx ou .xls (por enquanto)
+# Coleta do caminho do arquivo de origem .csv ou excel (por enquanto)
 nazare = fss('origin/Nazaré csv.csv')
 
 # Método que faz os tratamentos necessários para a arborização

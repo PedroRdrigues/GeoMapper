@@ -6,29 +6,29 @@ Created on Mon Nov 25 16:42:36 2024
 """
 
 from dataclasses import dataclass
-from MapeAR.afforestation.imports import ImportCsv, ImportExcel
+from .readers import ReadExcel, ReadCsv
 
 
 extensionListExcel = ['.xlsx', '.xls', '.xlsm', '.xlsb', '.xltx', '.xltm']
 
 
 @dataclass()
-class Afforestation:
+class Reader:
     filename: str
     path: str
     extension: str
 
     def __post_init__(self):
         if self.extension.lower() == '.csv':
-            self.import_csv()
+            self.csv()
 
         if self.extension.lower() in extensionListExcel:
-            self.import_excel()
+            self.excel()
 
-    def import_csv(self):
-        self.df = ImportCsv(
+    def csv(self):
+        self.df = ReadCsv(
             self.filename, self.path).df
 
-    def import_excel(self):
-        self.df = ImportExcel(
+    def excel(self):
+        self.df = ReadExcel(
             self.filename, self.path, self.extension).df

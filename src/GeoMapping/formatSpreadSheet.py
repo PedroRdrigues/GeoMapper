@@ -6,7 +6,7 @@ Created on Mon Nov 11 12:43:04 2024
 """
 import os
 from dataclasses import dataclass
-from GeoMapping.afforestation import Afforestation
+from GeoMapping.format import Reader
 
 
 @dataclass
@@ -18,14 +18,20 @@ class FormatSpreadSheet:
         p, ex = os.path.splitext(self.dataOrigin) # Separa a extensão do arquivo do restante da str
         listP = p.split('/') # Separa o restante da str em uma lista
         
-        self.filename = listP[-1]
-        self.path = '/'.join(listP[:-1])
-        self.extension = ex
-    
-    # Metodo que define o objetivo da planilha e importa para onde será feita o reconhecimento do tipo de arquivo
-    def afforestation(self):
-        self.df = Afforestation(self.filename, self.path, self.extension).df
+        filename = listP[-1]
+        path = '/'.join(listP[:-1])
+        extension = ex
         
+        self.df = Reader(filename, path, extension).df
+
+    # Classe que usa metodos para converter coodenadas para decimal ou dms(gráus, minutos e segundos)
+    class convertCoordinates:
+        def to_dms():
+            print('convertido para dms')
+        
+        def to_decimal():
+            print('convertido para decimal')
+            
     
     # Vai receber o objeto/DataFrame criado e formatado, o caminho e o nome do arquivo que será salvo.
     def save(self, filename:str):
@@ -34,5 +40,5 @@ class FormatSpreadSheet:
             os.mkdir(path)
         
         self.df.to_excel(f'{path}/{filename}.xlsx', index=False)
-        
-                
+
+    
